@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="text-editor">
+        <div class="text-header">
+            <button class="btn" id="boldBtn" title="Bold"><b>B</b></button>
+            <button class="btn" id="italicBtn" title="Italic"><i>I</i></button>
+            <button class="btn" id="underlineBtn" title="Underline"><u>U</u></button>
+            <button class="btn" id="supBtn" title="Superscript">X <sup>2</sup></button>
+            <button class="btn" id="subBtn" title="Subscript">X <sub>2</sub></button>
+            <button class="btn" id="strikeBtn" title="Strikethrough"><s>abc</s></button>
+            <button class="btn" id="oderedListBtn" title="Numbered list">(i)</button>
+            <button class="btn" id="unorderedListBtn" title="Bulleted list">&bull;</button>
+            <input type="color" id="fontColorBtn" title="Change Font Colour" />
+            <input type="color" id="highlightBtn" title="Highlight Text" />
+            
+            <select id="fontSizeChanger">
+                <script>
+                    for(let i = 1; i <= 72; i++){
+                        document.write(`<option value=${i} > ${i} </option>`);
+                        if(i === 11){
+                            document.write(`<option value=${i} selected> ${i} </option>`);
+                            
+                        }
+                    }
+                    </script>
+            </select>
+        </div>
+        <div class="text-area">
+            <iframe id="text-contorl" name="TEXTEDITOR" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
